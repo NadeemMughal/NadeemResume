@@ -1523,6 +1523,26 @@ section,
   color: var(--accent-color);
 }
 
+
+.button-group {
+    gap: 10px; /* Add space between the buttons */
+}
+
+.button-group .btn {
+    flex-grow: 1; /* Make buttons take up equal space */
+    text-align: center; /* Center the text inside the buttons */
+}
+
+.button-group .btn-primary {
+    margin-right: 5px; /* Add a little margin for better spacing */
+}
+
+.button-group .btn-secondary {
+    margin-left: 5px; /* Add a little margin for better spacing */
+}
+
+
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
