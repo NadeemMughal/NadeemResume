@@ -214,6 +214,29 @@ h6 {
   --background-color: rgba(0, 0, 0, 0.8);
 }
 
+.service-item {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.button-group {
+    margin-bottom: 15px; /* Space between the buttons and the bottom */
+}
+
+.fixed-bottom-buttons {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Add some gap between buttons if needed */
+}
+
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
