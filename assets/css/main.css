@@ -726,6 +726,52 @@ section,
     font-size: 38px;
   }
 }
+  .coming-soon-tile {
+    background-color: #f8f9fa;
+    border: 2px dashed #007bff;
+    transition: background-color 0.3s, border 0.3s, transform 0.3s;
+    text-align: center;
+    width: 100%; /* Ensure the tile occupies the full width of its container */
+  }
+  .coming-soon-tile:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #0056b3;
+    transform: scale(1.05);
+  }
+  .coming-soon-tile .icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+  }
+  .coming-soon-tile:hover .icon {
+    color: #fff;
+  }
+  .coming-soon-tile h4 {
+    font-weight: bold;
+    color: #007bff;
+    transition: color 0.3s;
+  }
+  .coming-soon-tile:hover h4 {
+    color: #fff;
+  }
+  .coming-soon-tile p {
+    color: #6c757d;
+    transition: color 0.3s;
+  }
+  .coming-soon-tile:hover p {
+    color: #fff;
+  }
+  .coming-soon-tile .btn-outline-primary.disabled {
+    color: #007bff;
+    border-color: #007bff;
+    pointer-events: none;
+  }
+  .coming-soon-tile:hover .btn-outline-primary.disabled {
+    color: #fff;
+    border-color: #fff;
+  }
 
 /*--------------------------------------------------------------
 # Hero Section
