@@ -795,6 +795,39 @@ section,
   .btn-coming-soon.disabled {
     opacity: 0.9;
   }
+/* Changed by Nadeem */
+  .service-item {
+    min-height: 350px; /* Set a min height for all tiles for consistency */
+    width: 100%; /* Responsive width */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  .service-item:hover {
+    transform: scale(1.05);
+  }
+
+  /* Ensure mobile responsiveness */
+  @media (max-width: 767px) {
+    .service-item {
+      min-height: auto; /* Adjust height for smaller screens */
+    }
+  }
+
+  .coming-soon-tile {
+    background-color: #f8f9fa;
+    border: 2px dashed #007bff;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .coming-soon-tile:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #0056b3;
+  }
 
 /*--------------------------------------------------------------
 # Hero Section
