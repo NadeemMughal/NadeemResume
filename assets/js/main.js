@@ -221,9 +221,17 @@
       } else {
         navmenulink.classList.remove('active');
       }
-    })
+    });
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  /**
+   * Show demo request popup
+   */
+  window.showDemoRequest = function (event) {
+    event.preventDefault();
+    alert('📧 For live demos, videos, and resources, please contact me via:\n\n✉️ Email: muhammadnadeem51200@gmail.com\n📱 Phone/WhatsApp: +92 333 8122531\n\nI\'ll be happy to provide you with detailed demonstrations and materials!');
+  }
 
 })();
