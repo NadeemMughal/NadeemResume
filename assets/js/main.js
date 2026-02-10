@@ -117,7 +117,15 @@
       mirror: false
     });
   }
-  window.addEventListener('load', aosInit);
+
+  // Init on DOM ready (faster)
+  document.addEventListener('DOMContentLoaded', aosInit);
+
+  // Refresh on full load (to handle layout shifts)
+  window.addEventListener('load', () => {
+    aosInit();
+    setTimeout(() => AOS.refresh(), 1000); // Failsafe for mobile resize/vanta
+  });
 
   /**
    * Init swiper sliders
