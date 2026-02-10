@@ -127,13 +127,31 @@ body.scrolled .header {
   }
 }
 
+.navmenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 1200px) {
+  .navmenu ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.navmenu li {
+  white-space: nowrap;
+}
+
 .navmenu a {
   color: var(--text-secondary);
   font-size: 14px;
   font-weight: 500;
   padding: 8px 16px;
+  /* Restore padding for click area */
   border-radius: 4px;
-  /* Slightly squarer for professional look */
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
