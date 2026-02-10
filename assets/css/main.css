@@ -413,6 +413,8 @@ body.scrolled .header {
   display: flex;
   gap: 10px;
   margin-top: 20px;
+  position: relative;
+  z-index: 10;
 }
 
 .btn-sm-glass {
@@ -426,6 +428,11 @@ body.scrolled .header {
   display: flex;
   align-items: center;
   gap: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
 }
 
 .btn-sm-glass:hover {
