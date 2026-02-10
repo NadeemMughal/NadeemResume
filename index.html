@@ -67,6 +67,13 @@
       width: 100%;
       z-index: 1000;
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      top: 0;
+      /* Ensure top is set for transition */
+    }
+
+    .header.header-hidden {
+      top: -100px;
+      /* Hide header */
     }
 
     body.scrolled .header {
@@ -76,17 +83,56 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
+    /* Mobile Nav Handling */
     .navmenu ul {
       margin: 0;
       padding: 0;
       list-style: none;
     }
 
+    /* Desktop View */
     @media (min-width: 1200px) {
       .navmenu ul {
         display: flex;
         align-items: center;
         gap: 30px;
+      }
+
+      .mobile-nav-toggle {
+        display: none;
+      }
+
+      /* Hide toggle on desktop */
+    }
+
+    /* Mobile View */
+    @media (max-width: 1199px) {
+      .mobile-nav-toggle {
+        display: block;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .navmenu ul {
+        display: none;
+        /* Hidden by default */
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        background: rgba(10, 10, 10, 0.95);
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid var(--glass-border);
+        flex-direction: column;
+        gap: 15px;
+        width: 200px;
+      }
+
+      /* Show when active */
+      body.mobile-nav-active .navmenu ul {
+        display: flex;
       }
     }
 
@@ -99,6 +145,7 @@
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
+      display: block;
     }
 
     .navmenu a::after {
@@ -206,7 +253,7 @@
   <!-- About Section -->
   <section id="about" class="about section">
     <div class="container section-title" data-aos="fade-up">
-      
+
       <h2>About Me</h2>
       <p>Turning complexity into autonomous efficiency.</p>
     </div>
@@ -248,8 +295,7 @@
           </div>
         </div>
         <div class="col-lg-4 text-center">
-          <img src="31.JPG" class="img-fluid rounded-4 shadow-lg border border-secondary"
-            alt="Muhammad Nadeem"
+          <img src="31.JPG" class="img-fluid rounded-4 shadow-lg border border-secondary" alt="Muhammad Nadeem"
             style="max-width: 100%; height: auto; border: 1px solid var(--glass-border); box-shadow: 0 0 30px rgba(0, 242, 255, 0.1);">
         </div>
       </div>
@@ -259,7 +305,7 @@
   <!-- Featured Work Section (Bento Grid) -->
   <section id="featured-work" class="featured-work section">
     <div class="container section-title" data-aos="fade-up">
-      
+
       <h2>Featured Work</h2>
       <p>High-impact solutions delivering real business value.</p>
     </div>
@@ -328,7 +374,7 @@
   <!-- Legacy Projects Section (Technical Projects) -->
   <section id="projects" class="projects section">
     <div class="container section-title" data-aos="fade-up">
-      
+
       <h2>Technical Archive</h2>
       <p>Explore my earlier work in Data Science, NLP, and Computer Vision.</p>
     </div>
@@ -439,7 +485,7 @@
   <!-- Resume Section -->
   <section id="resume" class="resume section">
     <div class="container section-title" data-aos="fade-up">
-      
+
       <h2>Resume & Experience</h2>
       <p>A timeline of my professional journey.</p>
     </div>
@@ -569,42 +615,27 @@
     <div class="container">
       <h3>Muhammad Nadeem</h3>
       <p>Innovating at the edge of Generative AI.</p>
-          <div class="social-links d-flex justify-content-center gap-4 mt-3">
+      <div class="social-links d-flex justify-content-center gap-4 mt-3">
 
-  <!-- LinkedIn -->
-  <a 
-    href="https://www.linkedin.com/in/muhammad-nadeem-ai-ml-engineer/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn Profile"
-    title="LinkedIn"
-  >
-    <i class="bi bi-linkedin"></i>
-  </a>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/muhammad-nadeem-ai-ml-engineer/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn Profile" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
 
-  <!-- GitHub -->
-  <a 
-    href="https://github.com/NadeemMughal"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="GitHub Profile"
-    title="GitHub"
-  >
-    <i class="bi bi-github"></i>
-  </a>
+        <!-- GitHub -->
+        <a href="https://github.com/NadeemMughal" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"
+          title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
 
-  <!-- Discord -->
-  <a 
-    href="https://discord.gg/yPpKbPDW"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Discord Community"
-    title="Discord"
-  >
-    <i class="bi bi-discord"></i>
-  </a>
+        <!-- Discord -->
+        <a href="https://discord.gg/yPpKbPDW" target="_blank" rel="noopener noreferrer" aria-label="Discord Community"
+          title="Discord">
+          <i class="bi bi-discord"></i>
+        </a>
 
-</div>
+      </div>
 
       <div class="copyright">
         &copy; Copyright <strong><span>Nadeem</span></strong>. All Rights Reserved
