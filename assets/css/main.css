@@ -431,8 +431,8 @@ body.scrolled .header {
 .tech-icon.icon-12 {
   top: 85%;
   right: 8%;
-  width: 58px;
-  height: 58px;
+  width: 158px;
+  height: 158px;
   animation: float-3 18s ease-in-out infinite 11s, pulse-glow 5s ease-in-out infinite 4s;
 }
 
