@@ -325,24 +325,24 @@ body.scrolled .header {
 .tech-icon.icon-1 {
   top: 12%;
   left: 8%;
-  width: 42px;
-  height: 42px;
+  width: 62px;
+  height: 62px;
   animation: float-1 20s ease-in-out infinite, rotate-slow 30s linear infinite;
 }
 
 .tech-icon.icon-2 {
   top: 22%;
   right: 12%;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   animation: float-2 18s ease-in-out infinite 2s, pulse-glow 4s ease-in-out infinite;
 }
 
 .tech-icon.icon-3 {
   top: 48%;
   left: 6%;
-  width: 38px;
-  height: 38px;
+  width: 58px;
+  height: 58px;
   animation: float-3 22s ease-in-out infinite 4s;
   background: rgba(189, 0, 255, 0.08);
   border-color: rgba(189, 0, 255, 0.3);
@@ -355,24 +355,24 @@ body.scrolled .header {
 .tech-icon.icon-4 {
   top: 58%;
   right: 10%;
-  width: 41px;
-  height: 41px;
+  width: 61px;
+  height: 61px;
   animation: float-1 19s ease-in-out infinite 6s, rotate-slow 25s linear infinite reverse;
 }
 
 .tech-icon.icon-5 {
   top: 32%;
   left: 22%;
-  width: 39px;
-  height: 39px;
+  width: 59px;
+  height: 59px;
   animation: float-2 21s ease-in-out infinite 3s;
 }
 
 .tech-icon.icon-6 {
   top: 68%;
   left: 18%;
-  width: 40px;
-  height: 40px;
+  width: 58px;
+  height: 58px;
   animation: float-3 17s ease-in-out infinite 5s, pulse-glow 5s ease-in-out infinite 2s;
   background: rgba(255, 165, 0, 0.08);
   border-color: rgba(255, 165, 0, 0.3);
@@ -385,32 +385,32 @@ body.scrolled .header {
 .tech-icon.icon-7 {
   top: 18%;
   right: 28%;
-  width: 38px;
-  height: 38px;
+  width: 58px;
+  height: 58px;
   animation: float-1 23s ease-in-out infinite 7s;
 }
 
 .tech-icon.icon-8 {
   top: 72%;
   right: 22%;
-  width: 42px;
-  height: 42px;
+  width: 58px;
+  height: 58px;
   animation: float-2 20s ease-in-out infinite 1s, rotate-slow 35s linear infinite;
 }
 
 .tech-icon.icon-9 {
   top: 42%;
   right: 6%;
-  width: 40px;
-  height: 40px;
+  width: 58px;
+  height: 58px;
   animation: float-3 19s ease-in-out infinite 8s;
 }
 
 .tech-icon.icon-10 {
   top: 78%;
   left: 32%;
-  width: 39px;
-  height: 39px;
+  width: 58px;
+  height: 58px;
   animation: float-1 24s ease-in-out infinite 9s, pulse-glow 6s ease-in-out infinite 3s;
   background: rgba(0, 255, 127, 0.08);
   border-color: rgba(0, 255, 127, 0.3);
@@ -423,16 +423,16 @@ body.scrolled .header {
 .tech-icon.icon-11 {
   top: 35%;
   right: 35%;
-  width: 38px;
-  height: 38px;
+  width: 58px;
+  height: 58px;
   animation: float-2 22s ease-in-out infinite 10s;
 }
 
 .tech-icon.icon-12 {
   top: 85%;
   right: 8%;
-  width: 40px;
-  height: 40px;
+  width: 58px;
+  height: 58px;
   animation: float-3 18s ease-in-out infinite 11s, pulse-glow 5s ease-in-out infinite 4s;
 }
 
