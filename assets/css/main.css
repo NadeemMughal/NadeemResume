@@ -298,24 +298,25 @@ body.scrolled .header {
   border: 2px solid rgba(0, 242, 255, 0.3);
   border-radius: 20px;
   padding: 18px 14px;
-  opacity: 0.6;
+  opacity: 0.9;
   transition: all 0.4s ease;
   box-shadow: 0 8px 32px rgba(0, 242, 255, 0.2),
     inset 0 0 20px rgba(0, 242, 255, 0.05);
 }
 
 .tech-icon:hover {
-  opacity: 0.9;
+  opacity: 1;
   transform: scale(1.1);
   border-color: rgba(0, 242, 255, 0.6);
   box-shadow: 0 12px 40px rgba(0, 242, 255, 0.4),
     inset 0 0 30px rgba(0, 242, 255, 0.1);
 }
 
-.tech-icon i {
-  font-size: 36px;
-  color: var(--accent-cyan);
-  filter: drop-shadow(0 0 12px rgba(0, 242, 255, 0.6));
+.tech-icon img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(0, 242, 255, 0.3));
 }
 
 .tech-icon span {
@@ -355,9 +356,8 @@ body.scrolled .header {
   border-color: rgba(189, 0, 255, 0.3);
 }
 
-.tech-icon.icon-3 i {
-  color: var(--accent-purple);
-  filter: drop-shadow(0 0 12px rgba(189, 0, 255, 0.6));
+.tech-icon.icon-3 img {
+  filter: drop-shadow(0 0 8px rgba(189, 0, 255, 0.3));
 }
 
 .tech-icon.icon-4 {
@@ -386,9 +386,8 @@ body.scrolled .header {
   border-color: rgba(255, 165, 0, 0.3);
 }
 
-.tech-icon.icon-6 i {
-  color: #ffa500;
-  filter: drop-shadow(0 0 12px rgba(255, 165, 0, 0.6));
+.tech-icon.icon-6 img {
+  filter: drop-shadow(0 0 8px rgba(255, 165, 0, 0.3));
 }
 
 .tech-icon.icon-7 {
@@ -425,9 +424,8 @@ body.scrolled .header {
   border-color: rgba(0, 255, 127, 0.3);
 }
 
-.tech-icon.icon-10 i {
-  color: #00ff7f;
-  filter: drop-shadow(0 0 12px rgba(0, 255, 127, 0.6));
+.tech-icon.icon-10 img {
+  filter: drop-shadow(0 0 8px rgba(0, 255, 127, 0.3));
 }
 
 .tech-icon.icon-11 {
@@ -436,14 +434,6 @@ body.scrolled .header {
   width: 74px;
   height: 74px;
   animation: float-2 22s ease-in-out infinite 10s;
-}
-
-.tech-icon.icon-12 {
-  top: 85%;
-  right: 8%;
-  width: 76px;
-  height: 76px;
-  animation: float-3 18s ease-in-out infinite 11s, pulse-glow 5s ease-in-out infinite 4s;
 }
 
 /* Floating Animations */
@@ -539,8 +529,9 @@ body.scrolled .header {
     padding: 12px 10px;
   }
 
-  .tech-icon i {
-    font-size: 28px;
+  .tech-icon img {
+    width: 35px;
+    height: 35px;
   }
 
   .tech-icon span {
@@ -550,8 +541,7 @@ body.scrolled .header {
   /* Hide some icons on mobile to reduce clutter */
   .tech-icon.icon-7,
   .tech-icon.icon-9,
-  .tech-icon.icon-11,
-  .tech-icon.icon-12 {
+  .tech-icon.icon-11 {
     display: none;
   }
 
