@@ -272,275 +272,95 @@ body.scrolled .header {
 }
 
 /*--------------------------------------------------------------
-# Floating Technology Icons
+# Technology Fade Carousel
 --------------------------------------------------------------*/
-#floating-icons {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-  overflow: hidden;
+.tech-carousel-section {
+  padding: 40px 0;
+  background: var(--bg-color);
+  border-top: 1px solid rgba(0, 242, 255, 0.05);
+  position: relative;
+  z-index: 10;
 }
 
-.tech-icon {
-  position: absolute;
+.tech-carousel-container {
+  width: 70%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tech-carousel-grid {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.tech-carousel-item {
+  flex: 0 1 auto;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  background: rgba(0, 242, 255, 0.08);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 2px solid rgba(0, 242, 255, 0.3);
-  border-radius: 20px;
-  padding: 16px;
-  opacity: 0.9;
-  transition: all 0.4s ease;
-  box-shadow: 0 8px 32px rgba(0, 242, 255, 0.2),
-    inset 0 0 20px rgba(0, 242, 255, 0.05);
+  padding: 15px;
+  background: rgba(0, 242, 255, 0.03);
+  border: 1px solid rgba(0, 242, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  animation: tech-fade 5s ease-in-out infinite;
+  min-width: 120px;
 }
 
-.tech-icon:hover {
-  opacity: 1;
-  transform: scale(1.1);
-  border-color: rgba(0, 242, 255, 0.6);
-  box-shadow: 0 12px 40px rgba(0, 242, 255, 0.4),
-    inset 0 0 30px rgba(0, 242, 255, 0.1);
-}
-
-.tech-icon img {
-  width: 80px;
-  height: 80px;
+.tech-carousel-item img {
+  height: 40px;
+  width: auto;
+  max-width: 100px;
   object-fit: contain;
-  filter: drop-shadow(0 0 8px rgba(0, 242, 255, 0.3));
+  filter: grayscale(1) brightness(1.5) opacity(0.7);
+  transition: all 0.4s ease;
 }
 
-
-
-/* Individual Icon Positioning & Animations */
-.tech-icon.icon-1 {
-  top: 12%;
-  left: 8%;
-  width: 62px;
-  height: 62px;
-  animation: float-1 20s ease-in-out infinite, rotate-slow 30s linear infinite;
+.tech-carousel-item:hover {
+  background: rgba(0, 242, 255, 0.08);
+  border-color: rgba(0, 242, 255, 0.3);
+  transform: translateY(-3px);
 }
 
-.tech-icon.icon-2 {
-  top: 22%;
-  right: 12%;
-  width: 60px;
-  height: 60px;
-  animation: float-2 18s ease-in-out infinite 2s, pulse-glow 4s ease-in-out infinite;
+.tech-carousel-item:hover img {
+  filter: grayscale(0) brightness(1) opacity(1);
 }
 
-.tech-icon.icon-3 {
-  top: 48%;
-  left: 6%;
-  width: 58px;
-  height: 58px;
-  animation: float-3 22s ease-in-out infinite 4s;
-  background: rgba(189, 0, 255, 0.08);
-  border-color: rgba(189, 0, 255, 0.3);
-}
-
-.tech-icon.icon-3 img {
-  filter: drop-shadow(0 0 8px rgba(189, 0, 255, 0.3));
-}
-
-.tech-icon.icon-4 {
-  top: 58%;
-  right: 10%;
-  width: 61px;
-  height: 61px;
-  animation: float-1 19s ease-in-out infinite 6s, rotate-slow 25s linear infinite reverse;
-}
-
-.tech-icon.icon-5 {
-  top: 32%;
-  left: 22%;
-  width: 59px;
-  height: 59px;
-  animation: float-2 21s ease-in-out infinite 3s;
-}
-
-.tech-icon.icon-6 {
-  top: 68%;
-  left: 18%;
-  width: 58px;
-  height: 58px;
-  animation: float-3 17s ease-in-out infinite 5s, pulse-glow 5s ease-in-out infinite 2s;
-  background: rgba(255, 165, 0, 0.08);
-  border-color: rgba(255, 165, 0, 0.3);
-}
-
-.tech-icon.icon-6 img {
-  filter: drop-shadow(0 0 8px rgba(255, 165, 0, 0.3));
-}
-
-.tech-icon.icon-7 {
-  top: 18%;
-  right: 28%;
-  width: 58px;
-  height: 58px;
-  animation: float-1 23s ease-in-out infinite 7s;
-}
-
-.tech-icon.icon-8 {
-  top: 72%;
-  right: 22%;
-  width: 58px;
-  height: 58px;
-  animation: float-2 20s ease-in-out infinite 1s, rotate-slow 35s linear infinite;
-}
-
-.tech-icon.icon-9 {
-  top: 42%;
-  right: 6%;
-  width: 58px;
-  height: 58px;
-  animation: float-3 19s ease-in-out infinite 8s;
-}
-
-.tech-icon.icon-10 {
-  top: 78%;
-  left: 32%;
-  width: 58px;
-  height: 58px;
-  animation: float-1 24s ease-in-out infinite 9s, pulse-glow 6s ease-in-out infinite 3s;
-  background: rgba(0, 255, 127, 0.08);
-  border-color: rgba(0, 255, 127, 0.3);
-}
-
-.tech-icon.icon-10 img {
-  filter: drop-shadow(0 0 8px rgba(0, 255, 127, 0.3));
-}
-
-.tech-icon.icon-11 {
-  top: 35%;
-  right: 35%;
-  width: 58px;
-  height: 58px;
-  animation: float-2 22s ease-in-out infinite 10s;
-}
-
-.tech-icon.icon-12 {
-  top: 85%;
-  right: 8%;
-  width: 58px;
-  height: 58px;
-  animation: float-3 18s ease-in-out infinite 11s, pulse-glow 5s ease-in-out infinite 4s;
-}
-
-/* Floating Animations */
-@keyframes float-1 {
+@keyframes tech-fade {
 
   0%,
   100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-
-  25% {
-    transform: translate(20px, -30px) rotate(5deg);
+    opacity: 0.4;
+    transform: scale(0.95);
   }
 
   50% {
-    transform: translate(-15px, -50px) rotate(-5deg);
-  }
-
-  75% {
-    transform: translate(-25px, -20px) rotate(3deg);
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
-@keyframes float-2 {
-
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-
-  33% {
-    transform: translate(-25px, 40px) rotate(-8deg);
-  }
-
-  66% {
-    transform: translate(30px, 20px) rotate(8deg);
+@media (max-width: 991px) {
+  .tech-carousel-container {
+    width: 90%;
   }
 }
 
-@keyframes float-3 {
-
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(0deg);
+@media (max-width: 576px) {
+  .tech-carousel-grid {
+    gap: 15px;
   }
 
-  20% {
-    transform: translate(15px, 25px) rotate(4deg);
+  .tech-carousel-item {
+    min-width: 100px;
+    padding: 10px;
   }
 
-  40% {
-    transform: translate(-20px, 45px) rotate(-6deg);
-  }
-
-  60% {
-    transform: translate(25px, 15px) rotate(7deg);
-  }
-
-  80% {
-    transform: translate(-10px, 35px) rotate(-3deg);
-  }
-}
-
-@keyframes rotate-slow {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes pulse-glow {
-
-  0%,
-  100% {
-    box-shadow: 0 8px 32px rgba(0, 242, 255, 0.2),
-      inset 0 0 20px rgba(0, 242, 255, 0.05);
-    opacity: 0.6;
-  }
-
-  50% {
-    box-shadow: 0 12px 40px rgba(0, 242, 255, 0.5),
-      inset 0 0 30px rgba(0, 242, 255, 0.15);
-    opacity: 0.8;
-  }
-}
-
-/* Responsive Design for Mobile and Tablet */
-
-/* Mobile: Hide all icons */
-@media (max-width: 768px) {
-  #floating-icons {
-    display: none;
-  }
-}
-
-/* Tablet: Show only first 6 icons */
-@media (min-width: 769px) and (max-width: 1024px) {
-
-  .tech-icon.icon-7,
-  .tech-icon.icon-8,
-  .tech-icon.icon-9,
-  .tech-icon.icon-10,
-  .tech-icon.icon-11 {
-    display: none;
+  .tech-carousel-item img {
+    height: 30px;
   }
 }
 
